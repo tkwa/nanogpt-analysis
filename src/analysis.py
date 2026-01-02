@@ -10,18 +10,55 @@ import pandas as pd
 def load_star_history(star_csv_path: str | None) -> pd.DataFrame | None:
     """Load star history from CSV if available.
 
-    Expected format from star-history.com:
-    - Column 1: Date (YYYY-MM-DD)
-    - Column 2: Stars (integer)
+    Handles multiple formats from star-history.com:
+    - 2 columns: date, stars
+    - 3 columns: repository, date, stars (or date, repository, stars)
     """
     if star_csv_path is None or not Path(star_csv_path).exists():
         return None
 
     df = pd.read_csv(star_csv_path)
 
-    # Standardize column names
-    df.columns = ["date", "stars"]
-    df["date"] = pd.to_datetime(df["date"])
+    # Normalize column names to lowercase
+    df.columns = [c.lower().strip() for c in df.columns]
+
+    # Handle different column formats
+    if "date" in df.columns and "stars" in df.columns:
+        # Already has named columns
+        df = df[["date", "stars"]].copy()
+    elif len(df.columns) == 2:
+        # Assume date, stars
+        df.columns = ["date", "stars"]
+    elif len(df.columns) == 3:
+        # Assume repository, date, stars - drop repository column
+        # Try to identify which column is which
+        for col in df.columns:
+            if col.lower() in ["repo", "repository"]:
+                df = df.drop(columns=[col])
+                break
+        else:
+            # If no repo column found, assume first column is repo
+            df = df.iloc[:, 1:3].copy()
+        df.columns = ["date", "stars"]
+    else:
+        print(f"Warning: Unexpected CSV format with {len(df.columns)} columns")
+        return None
+
+    # Handle complex date formats from star-history.com
+    # e.g., "Sat Jun 01 2024 19:40:04 GMT-0700 (Pacific Daylight Time)"
+    def parse_star_date(date_str):
+        # Remove timezone name in parentheses
+        if "(" in str(date_str):
+            date_str = str(date_str).split("(")[0].strip()
+        dt = pd.to_datetime(date_str, errors="coerce")
+        # Normalize to date only (tz-naive) for comparison
+        if pd.notna(dt):
+            return pd.Timestamp(dt.year, dt.month, dt.day)
+        return dt
+
+    df["date"] = df["date"].apply(parse_star_date)
+    df["stars"] = pd.to_numeric(df["stars"], errors="coerce")
+    df = df.dropna()
     df = df.sort_values("date")
 
     return df
@@ -141,7 +178,10 @@ def main():
     data_dir = Path(__file__).parent.parent / "data"
     records_path = data_dir / "raw_records.json"
     loc_path = data_dir / "loc_data.json"
-    star_csv_path = data_dir / "star_history.csv"
+    # Try both naming conventions
+    star_csv_path = data_dir / "star-history.csv"
+    if not star_csv_path.exists():
+        star_csv_path = data_dir / "star_history.csv"
     output_path = data_dir / "improvements.json"
 
     # Check if star history exists

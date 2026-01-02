@@ -1,6 +1,14 @@
 # nanogpt-analysis
 Measure the amount of algorithmic improvement in the nanogpt speedrun (https://github.com/KellerJordan/modded-nanogpt) versus the amount of effort applied.
 
+analysis by tkwa
+
+- Speed over time is super jagged
+- Time vs LoC is 
+
+
+
+
 prompt for claude
 
 The goal of this project is to measure the amount of algorithmic improvement in the nanogpt speedrun (https://github.com/KellerJordan/modded-nanogpt) versus the amount of effort applied. We want to measure the training speed record vs calendar time, lines of code, and repository stars.
