@@ -1,0 +1,515 @@
+[
+  {
+    "record_num": 1,
+    "time_minutes": 45.0,
+    "description": "llm.c baseline",
+    "date": "2024-05-28",
+    "pr_number": null,
+    "contributors": "@karpathy, llm.c contributors",
+    "is_retiming": false
+  },
+  {
+    "record_num": 2,
+    "time_minutes": 31.4,
+    "description": "Tuned learning rate & rotary embeddings",
+    "date": "2024-06-06",
+    "pr_number": null,
+    "contributors": "@kellerjordan0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 3,
+    "time_minutes": 24.9,
+    "description": "Introduced the Muon optimizer",
+    "date": "2024-10-04",
+    "pr_number": null,
+    "contributors": "@kellerjordan0, @jxbz",
+    "is_retiming": false
+  },
+  {
+    "record_num": 4,
+    "time_minutes": 22.3,
+    "description": "Muon improvements",
+    "date": "2024-10-11",
+    "pr_number": null,
+    "contributors": "@kellerjordan0, @bozavlado",
+    "is_retiming": false
+  },
+  {
+    "record_num": 5,
+    "time_minutes": 15.2,
+    "description": "Pad embeddings, ReLU\u00b2, zero-init projections, QK-norm",
+    "date": "2024-10-14",
+    "pr_number": null,
+    "contributors": "@Grad62304977, @kellerjordan0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 6,
+    "time_minutes": 13.1,
+    "description": "Distributed the overhead of Muon",
+    "date": "2024-10-18",
+    "pr_number": null,
+    "contributors": "@kellerjordan0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 7,
+    "time_minutes": 12.0,
+    "description": "Upgraded PyTorch 2.5.0",
+    "date": "2024-10-18",
+    "pr_number": null,
+    "contributors": "@kellerjordan0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 8,
+    "time_minutes": 10.8,
+    "description": "Untied embedding and head",
+    "date": "2024-11-03",
+    "pr_number": null,
+    "contributors": "@Grad62304977, @kellerjordan0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 9,
+    "time_minutes": 8.2,
+    "description": "Value and embedding skip connections, momentum warmup, logit softcap",
+    "date": "2024-11-06",
+    "pr_number": null,
+    "contributors": "@Grad62304977, @kellerjordan0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 10,
+    "time_minutes": 7.8,
+    "description": "Bfloat16 activations",
+    "date": "2024-11-08",
+    "pr_number": null,
+    "contributors": "@kellerjordan0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 11,
+    "time_minutes": 7.2,
+    "description": "U-net pattern skip connections & double lr",
+    "date": "2024-11-10",
+    "pr_number": null,
+    "contributors": "@brendanh0gan",
+    "is_retiming": false
+  },
+  {
+    "record_num": 12,
+    "time_minutes": 5.03,
+    "description": "1024-ctx dense causal attention \u2192 64K-ctx FlexAttention",
+    "date": "2024-11-19",
+    "pr_number": null,
+    "contributors": "@KoszarskyB",
+    "is_retiming": false
+  },
+  {
+    "record_num": 13,
+    "time_minutes": 4.66,
+    "description": "Attention window warmup",
+    "date": "2024-11-24",
+    "pr_number": null,
+    "contributors": "@fernbear.bsky.social",
+    "is_retiming": false
+  },
+  {
+    "record_num": 14,
+    "time_minutes": 4.41,
+    "description": "Value Embeddings",
+    "date": "2024-12-04",
+    "pr_number": null,
+    "contributors": "@KoszarskyB",
+    "is_retiming": false
+  },
+  {
+    "record_num": 15,
+    "time_minutes": 3.95,
+    "description": "U-net pattern value embeddings, assorted code optimizations",
+    "date": "2024-12-08",
+    "pr_number": null,
+    "contributors": "@leloykun, @YouJiacheng",
+    "is_retiming": false
+  },
+  {
+    "record_num": 16,
+    "time_minutes": 3.8,
+    "description": "Split value embeddings, block sliding window, separate block mask",
+    "date": "2024-12-10",
+    "pr_number": null,
+    "contributors": "@YouJiacheng",
+    "is_retiming": false
+  },
+  {
+    "record_num": 17,
+    "time_minutes": 3.57,
+    "description": "Sparsify value embeddings, improve rotary embeddings, drop an attn layer",
+    "date": "2024-12-17",
+    "pr_number": null,
+    "contributors": "@YouJiacheng",
+    "is_retiming": false
+  },
+  {
+    "record_num": 18,
+    "time_minutes": 3.4,
+    "description": "Lower logit softcap from 30 to 15",
+    "date": "2025-01-04",
+    "pr_number": null,
+    "contributors": "@KoszarskyB",
+    "is_retiming": false
+  },
+  {
+    "record_num": 19,
+    "time_minutes": 3.142,
+    "description": "FP8 head, offset logits, lr decay to 0.1 instead of 0.0",
+    "date": "2025-01-13",
+    "pr_number": null,
+    "contributors": "@YouJiacheng",
+    "is_retiming": false
+  },
+  {
+    "record_num": 20,
+    "time_minutes": 2.992,
+    "description": "Merged QKV weights, long-short attention, attention scale, lower Adam epsilon, batched Muon",
+    "date": "2025-01-16",
+    "pr_number": null,
+    "contributors": "@leloykun, @fernbear.bsky.social, @YouJiacheng, @brendanh0gan, @scottjmaddox, @Grad62304977",
+    "is_retiming": false
+  },
+  {
+    "record_num": 21,
+    "time_minutes": 2.933,
+    "description": "Reduced batch size",
+    "date": "2025-01-26",
+    "pr_number": null,
+    "contributors": "@leloykun",
+    "is_retiming": false
+  },
+  {
+    "record_num": 21,
+    "time_minutes": 2.997,
+    "description": "21st record with new timing",
+    "date": "2025-02-01",
+    "pr_number": null,
+    "contributors": "not a new record, just re-timing #21 with the [updated rules](#timing-change-after-record-21)",
+    "is_retiming": true
+  },
+  {
+    "record_num": 21,
+    "time_minutes": 3.014,
+    "description": "21st record with latest torch",
+    "date": "2025-05-24",
+    "pr_number": null,
+    "contributors": "not a new record, just re-timing #21 with latest torch",
+    "is_retiming": true
+  },
+  {
+    "record_num": 22,
+    "time_minutes": 2.99,
+    "description": "Faster gradient all-reduce",
+    "date": "2025-05-24",
+    "pr_number": null,
+    "contributors": "@KonstantinWilleke, @alexrgilbert, @adricarda, @tuttyfrutyee, @vdlad; The Enigma project",
+    "is_retiming": false
+  },
+  {
+    "record_num": 23,
+    "time_minutes": 2.979,
+    "description": "Overlap computation and gradient communication",
+    "date": "2025-05-25",
+    "pr_number": null,
+    "contributors": "@ryanyang0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 24,
+    "time_minutes": 2.966,
+    "description": "Replace gradient all_reduce with reduce_scatter",
+    "date": "2025-05-30",
+    "pr_number": null,
+    "contributors": "@vagrawal",
+    "is_retiming": false
+  },
+  {
+    "record_num": 25,
+    "time_minutes": 2.896,
+    "description": "Upgrade PyTorch to 2.9.0.dev20250713+cu126",
+    "date": "2025-07-13",
+    "pr_number": null,
+    "contributors": "@kellerjordan0",
+    "is_retiming": false
+  },
+  {
+    "record_num": 26,
+    "time_minutes": 2.863,
+    "description": "Align training batch starts with EoS, increase cooldown frac to .45",
+    "date": "2025-07-13",
+    "pr_number": null,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 27,
+    "time_minutes": 2.817,
+    "description": "Transpose one of the MLP matrices + add Triton kernel for symmetric matmul",
+    "date": "2025-07-18",
+    "pr_number": 109,
+    "contributors": "@byronxu99",
+    "is_retiming": false
+  },
+  {
+    "record_num": 28,
+    "time_minutes": 2.812,
+    "description": "Sparse attention gate",
+    "date": "2025-08-23",
+    "pr_number": 117,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 29,
+    "time_minutes": 2.731,
+    "description": "Flash Attention 3, 2048 max_doc_len, update ws schedule",
+    "date": "2025-09-03",
+    "pr_number": 118,
+    "contributors": "@varunneal",
+    "is_retiming": false
+  },
+  {
+    "record_num": 30,
+    "time_minutes": 2.717,
+    "description": "Drop first MLP layer",
+    "date": "2025-09-05",
+    "pr_number": 120,
+    "contributors": "@EmelyanenkoK",
+    "is_retiming": false
+  },
+  {
+    "record_num": 31,
+    "time_minutes": 2.656,
+    "description": "Dynamically incorporate YaRN during training and validation",
+    "date": "2025-09-10",
+    "pr_number": 122,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 32,
+    "time_minutes": 2.625,
+    "description": "Optimize distributed training, improve skip connection gating, and enhance bfloat16 usage",
+    "date": "2025-09-11",
+    "pr_number": 125,
+    "contributors": "@bernard24 & hiverge.ai",
+    "is_retiming": false
+  },
+  {
+    "record_num": 33,
+    "time_minutes": 2.565,
+    "description": "Asynchronously fetch and index data batches, extend final layer attention window for validation",
+    "date": "2025-09-15",
+    "pr_number": 127,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 34,
+    "time_minutes": 2.547,
+    "description": "Smear token embeddings 1 position forward",
+    "date": "2025-09-18",
+    "pr_number": 130,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 35,
+    "time_minutes": 2.527,
+    "description": "Drop first attn layer, extend all long windows for validation, update schedule",
+    "date": "2025-09-21",
+    "pr_number": 131,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 36,
+    "time_minutes": 2.495,
+    "description": "MuonCustomSizing, perform mlp and attn reduce scatter in shared call",
+    "date": "2025-09-23",
+    "pr_number": 132,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 37,
+    "time_minutes": 2.483,
+    "description": "Compute cross entropy in BF16 during training",
+    "date": "2025-09-27",
+    "pr_number": 133,
+    "contributors": "@Gusarich",
+    "is_retiming": false
+  },
+  {
+    "record_num": 38,
+    "time_minutes": 2.476,
+    "description": "Polar Express, replacement for Newton-Schulz",
+    "date": "2025-09-29",
+    "pr_number": 134,
+    "contributors": "@varunneal",
+    "is_retiming": false
+  },
+  {
+    "record_num": 39,
+    "time_minutes": 2.447,
+    "description": "Only update Adam params every other step, reduce batch size",
+    "date": "2025-09-30",
+    "pr_number": 136,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 40,
+    "time_minutes": 2.358,
+    "description": "Backout, misc hyperparameter tuning, optimize lambda padding",
+    "date": "2025-10-04",
+    "pr_number": 140,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 41,
+    "time_minutes": 2.345,
+    "description": "NorMuon",
+    "date": "2025-10-24",
+    "pr_number": 144,
+    "contributors": "@li_zichong",
+    "is_retiming": false
+  },
+  {
+    "record_num": 42,
+    "time_minutes": 2.313,
+    "description": "Update NorMuon LR, Step Logic",
+    "date": "2025-10-27",
+    "pr_number": 146,
+    "contributors": "@varunneal",
+    "is_retiming": false
+  },
+  {
+    "record_num": 43,
+    "time_minutes": 2.284,
+    "description": "Cautious Weight Decay w/ schedule",
+    "date": "2025-11-10",
+    "pr_number": 154,
+    "contributors": "@varunneal",
+    "is_retiming": false
+  },
+  {
+    "record_num": 44,
+    "time_minutes": 2.269,
+    "description": "Backward hooks on Adam, Profiling 101",
+    "date": "2025-11-16",
+    "pr_number": 149,
+    "contributors": "@akash5474",
+    "is_retiming": false
+  },
+  {
+    "record_num": 45,
+    "time_minutes": 2.248,
+    "description": "Refine skip arch, update exponential decay init",
+    "date": "2025-11-18",
+    "pr_number": 159,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 46,
+    "time_minutes": 2.203,
+    "description": "Batch size schedule",
+    "date": "2025-11-29",
+    "pr_number": 163,
+    "contributors": "@varunneal",
+    "is_retiming": false
+  },
+  {
+    "record_num": 47,
+    "time_minutes": 2.193,
+    "description": "Multiply attn lambda with weight instead of data, fix warmup",
+    "date": "2025-12-10",
+    "pr_number": 166,
+    "contributors": "@roeeshenberg",
+    "is_retiming": false
+  },
+  {
+    "record_num": 48,
+    "time_minutes": 2.17,
+    "description": "Speed up Muon, additional pre-multiply lambda, reshape matrices, update lr, update NorMuon axis",
+    "date": "2025-12-11",
+    "pr_number": 168,
+    "contributors": "@ChrisJMcCormick",
+    "is_retiming": false
+  },
+  {
+    "record_num": 49,
+    "time_minutes": 2.146,
+    "description": "Partial Key Offset",
+    "date": "2025-12-14",
+    "pr_number": 169,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 50,
+    "time_minutes": 2.128,
+    "description": "Extend Cautious Weight Decay to Adam parameters",
+    "date": "2025-12-18",
+    "pr_number": 172,
+    "contributors": "@roeeshenberg",
+    "is_retiming": false
+  },
+  {
+    "record_num": 51,
+    "time_minutes": 2.075,
+    "description": "Retie Embed to lm_head, retune fp8 scales",
+    "date": "2025-12-19",
+    "pr_number": 175,
+    "contributors": "@varunneal",
+    "is_retiming": false
+  },
+  {
+    "record_num": 52,
+    "time_minutes": 2.037,
+    "description": "Smooth scalars via beta increase, decrease smear gate lr, freeze scalars during transitions, adam all reduce",
+    "date": "2025-12-21",
+    "pr_number": 177,
+    "contributors": "@ChrisJMcCormick",
+    "is_retiming": false
+  },
+  {
+    "record_num": 53,
+    "time_minutes": 1.988,
+    "description": "Multi-token prediction, untie embed/lm_head at 2/3 training, lr update, tweak CWD",
+    "date": "2025-12-22",
+    "pr_number": 178,
+    "contributors": "@varunneal, @classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 54,
+    "time_minutes": 1.94,
+    "description": "Asymmetric Logit Rescale",
+    "date": "2025-12-26",
+    "pr_number": 181,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  },
+  {
+    "record_num": 55,
+    "time_minutes": 1.918,
+    "description": "Gates on value embeds and skip connection",
+    "date": "2025-12-29",
+    "pr_number": 186,
+    "contributors": "@classiclarryd",
+    "is_retiming": false
+  }
+]

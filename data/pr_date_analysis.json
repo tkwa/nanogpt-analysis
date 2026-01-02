@@ -1,0 +1,263 @@
+[
+  {
+    "record_num": 27,
+    "pr_number": 109,
+    "listed_date": "2025-07-18",
+    "pr_created": "2025-07-18",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -89
+  },
+  {
+    "record_num": 28,
+    "pr_number": 117,
+    "listed_date": "2025-08-23",
+    "pr_created": "2025-08-23",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -53
+  },
+  {
+    "record_num": 29,
+    "pr_number": 118,
+    "listed_date": "2025-09-03",
+    "pr_created": "2025-08-27",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 7,
+    "days_listed_vs_merged": -42
+  },
+  {
+    "record_num": 30,
+    "pr_number": 120,
+    "listed_date": "2025-09-05",
+    "pr_created": "2025-09-05",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -40
+  },
+  {
+    "record_num": 31,
+    "pr_number": 122,
+    "listed_date": "2025-09-10",
+    "pr_created": "2025-09-11",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -35
+  },
+  {
+    "record_num": 32,
+    "pr_number": 125,
+    "listed_date": "2025-09-11",
+    "pr_created": "2025-09-11",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -34
+  },
+  {
+    "record_num": 33,
+    "pr_number": 127,
+    "listed_date": "2025-09-15",
+    "pr_created": "2025-09-16",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -30
+  },
+  {
+    "record_num": 34,
+    "pr_number": 130,
+    "listed_date": "2025-09-18",
+    "pr_created": "2025-09-18",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -27
+  },
+  {
+    "record_num": 35,
+    "pr_number": 131,
+    "listed_date": "2025-09-21",
+    "pr_created": "2025-09-22",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -24
+  },
+  {
+    "record_num": 36,
+    "pr_number": 132,
+    "listed_date": "2025-09-23",
+    "pr_created": "2025-09-24",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -22
+  },
+  {
+    "record_num": 37,
+    "pr_number": 133,
+    "listed_date": "2025-09-27",
+    "pr_created": "2025-09-27",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -18
+  },
+  {
+    "record_num": 38,
+    "pr_number": 134,
+    "listed_date": "2025-09-29",
+    "pr_created": "2025-09-29",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -16
+  },
+  {
+    "record_num": 39,
+    "pr_number": 136,
+    "listed_date": "2025-09-30",
+    "pr_created": "2025-09-29",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 1,
+    "days_listed_vs_merged": -15
+  },
+  {
+    "record_num": 40,
+    "pr_number": 140,
+    "listed_date": "2025-10-04",
+    "pr_created": "2025-10-04",
+    "pr_merged": "2025-10-15",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -11
+  },
+  {
+    "record_num": 41,
+    "pr_number": 144,
+    "listed_date": "2025-10-24",
+    "pr_created": "2025-10-24",
+    "pr_merged": "2025-10-29",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -5
+  },
+  {
+    "record_num": 42,
+    "pr_number": 146,
+    "listed_date": "2025-10-27",
+    "pr_created": "2025-10-28",
+    "pr_merged": "2025-11-06",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -10
+  },
+  {
+    "record_num": 43,
+    "pr_number": 154,
+    "listed_date": "2025-11-10",
+    "pr_created": "2025-11-10",
+    "pr_merged": "2025-11-14",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -4
+  },
+  {
+    "record_num": 44,
+    "pr_number": 149,
+    "listed_date": "2025-11-16",
+    "pr_created": "2025-10-31",
+    "pr_merged": "2025-11-16",
+    "days_listed_vs_created": 16,
+    "days_listed_vs_merged": 0
+  },
+  {
+    "record_num": 45,
+    "pr_number": 159,
+    "listed_date": "2025-11-18",
+    "pr_created": "2025-11-19",
+    "pr_merged": "2025-11-23",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -5
+  },
+  {
+    "record_num": 46,
+    "pr_number": 163,
+    "listed_date": "2025-11-29",
+    "pr_created": "2025-11-30",
+    "pr_merged": "2025-12-09",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -10
+  },
+  {
+    "record_num": 47,
+    "pr_number": 166,
+    "listed_date": "2025-12-10",
+    "pr_created": "2025-12-10",
+    "pr_merged": "2025-12-11",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -1
+  },
+  {
+    "record_num": 48,
+    "pr_number": 168,
+    "listed_date": "2025-12-11",
+    "pr_created": "2025-12-12",
+    "pr_merged": "2025-12-14",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -3
+  },
+  {
+    "record_num": 49,
+    "pr_number": 169,
+    "listed_date": "2025-12-14",
+    "pr_created": "2025-12-14",
+    "pr_merged": "2025-12-16",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -2
+  },
+  {
+    "record_num": 50,
+    "pr_number": 172,
+    "listed_date": "2025-12-18",
+    "pr_created": "2025-12-18",
+    "pr_merged": "2025-12-20",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -2
+  },
+  {
+    "record_num": 51,
+    "pr_number": 175,
+    "listed_date": "2025-12-19",
+    "pr_created": "2025-12-20",
+    "pr_merged": "2025-12-22",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -3
+  },
+  {
+    "record_num": 52,
+    "pr_number": 177,
+    "listed_date": "2025-12-21",
+    "pr_created": "2025-12-21",
+    "pr_merged": "2025-12-24",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -3
+  },
+  {
+    "record_num": 53,
+    "pr_number": 178,
+    "listed_date": "2025-12-22",
+    "pr_created": "2025-12-22",
+    "pr_merged": "2025-12-25",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": -3
+  },
+  {
+    "record_num": 54,
+    "pr_number": 181,
+    "listed_date": "2025-12-26",
+    "pr_created": "2025-12-27",
+    "pr_merged": "2025-12-27",
+    "days_listed_vs_created": -1,
+    "days_listed_vs_merged": -1
+  },
+  {
+    "record_num": 55,
+    "pr_number": 186,
+    "listed_date": "2025-12-29",
+    "pr_created": "2025-12-29",
+    "pr_merged": "2025-12-29",
+    "days_listed_vs_created": 0,
+    "days_listed_vs_merged": 0
+  }
+]

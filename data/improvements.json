@@ -1,0 +1,552 @@
+[
+  {
+    "record_num": 1,
+    "date": "2024-05-28",
+    "days_since_start": 0,
+    "record_time_minutes": 45.0,
+    "cumulative_loc": null,
+    "stars": null,
+    "description": "llm.c baseline",
+    "pr_number": null
+  },
+  {
+    "record_num": 2,
+    "date": "2024-06-06",
+    "days_since_start": 9,
+    "record_time_minutes": 31.4,
+    "cumulative_loc": 446,
+    "stars": null,
+    "description": "Tuned learning rate & rotary embeddings",
+    "pr_number": null
+  },
+  {
+    "record_num": 3,
+    "date": "2024-10-04",
+    "days_since_start": 129,
+    "record_time_minutes": 24.9,
+    "cumulative_loc": 495,
+    "stars": null,
+    "description": "Introduced the Muon optimizer",
+    "pr_number": null
+  },
+  {
+    "record_num": 4,
+    "date": "2024-10-11",
+    "days_since_start": 136,
+    "record_time_minutes": 22.3,
+    "cumulative_loc": 524,
+    "stars": null,
+    "description": "Muon improvements",
+    "pr_number": null
+  },
+  {
+    "record_num": 5,
+    "date": "2024-10-14",
+    "days_since_start": 139,
+    "record_time_minutes": 15.2,
+    "cumulative_loc": 537,
+    "stars": null,
+    "description": "Pad embeddings, ReLU\u00b2, zero-init projections, QK-norm",
+    "pr_number": null
+  },
+  {
+    "record_num": 6,
+    "date": "2024-10-18",
+    "days_since_start": 143,
+    "record_time_minutes": 13.1,
+    "cumulative_loc": 537,
+    "stars": null,
+    "description": "Distributed the overhead of Muon",
+    "pr_number": null
+  },
+  {
+    "record_num": 7,
+    "date": "2024-10-18",
+    "days_since_start": 143,
+    "record_time_minutes": 12.0,
+    "cumulative_loc": 537,
+    "stars": null,
+    "description": "Upgraded PyTorch 2.5.0",
+    "pr_number": null
+  },
+  {
+    "record_num": 8,
+    "date": "2024-11-03",
+    "days_since_start": 159,
+    "record_time_minutes": 10.8,
+    "cumulative_loc": 539,
+    "stars": null,
+    "description": "Untied embedding and head",
+    "pr_number": null
+  },
+  {
+    "record_num": 9,
+    "date": "2024-11-06",
+    "days_since_start": 162,
+    "record_time_minutes": 8.2,
+    "cumulative_loc": 557,
+    "stars": null,
+    "description": "Value and embedding skip connections, momentum warmup, logit softcap",
+    "pr_number": null
+  },
+  {
+    "record_num": 10,
+    "date": "2024-11-08",
+    "days_since_start": 164,
+    "record_time_minutes": 7.8,
+    "cumulative_loc": 547,
+    "stars": null,
+    "description": "Bfloat16 activations",
+    "pr_number": null
+  },
+  {
+    "record_num": 11,
+    "date": "2024-11-10",
+    "days_since_start": 166,
+    "record_time_minutes": 7.2,
+    "cumulative_loc": 545,
+    "stars": null,
+    "description": "U-net pattern skip connections & double lr",
+    "pr_number": null
+  },
+  {
+    "record_num": 12,
+    "date": "2024-11-19",
+    "days_since_start": 175,
+    "record_time_minutes": 5.03,
+    "cumulative_loc": 576,
+    "stars": null,
+    "description": "1024-ctx dense causal attention \u2192 64K-ctx FlexAttention",
+    "pr_number": null
+  },
+  {
+    "record_num": 13,
+    "date": "2024-11-24",
+    "days_since_start": 180,
+    "record_time_minutes": 4.66,
+    "cumulative_loc": 579,
+    "stars": null,
+    "description": "Attention window warmup",
+    "pr_number": null
+  },
+  {
+    "record_num": 14,
+    "date": "2024-12-04",
+    "days_since_start": 190,
+    "record_time_minutes": 4.41,
+    "cumulative_loc": 566,
+    "stars": null,
+    "description": "Value Embeddings",
+    "pr_number": null
+  },
+  {
+    "record_num": 15,
+    "date": "2024-12-08",
+    "days_since_start": 194,
+    "record_time_minutes": 3.95,
+    "cumulative_loc": 566,
+    "stars": null,
+    "description": "U-net pattern value embeddings, assorted code optimizations",
+    "pr_number": null
+  },
+  {
+    "record_num": 16,
+    "date": "2024-12-10",
+    "days_since_start": 196,
+    "record_time_minutes": 3.8,
+    "cumulative_loc": 611,
+    "stars": null,
+    "description": "Split value embeddings, block sliding window, separate block mask",
+    "pr_number": null
+  },
+  {
+    "record_num": 17,
+    "date": "2024-12-17",
+    "days_since_start": 203,
+    "record_time_minutes": 3.57,
+    "cumulative_loc": 618,
+    "stars": null,
+    "description": "Sparsify value embeddings, improve rotary embeddings, drop an attn layer",
+    "pr_number": null
+  },
+  {
+    "record_num": 18,
+    "date": "2025-01-04",
+    "days_since_start": 221,
+    "record_time_minutes": 3.4,
+    "cumulative_loc": 558,
+    "stars": null,
+    "description": "Lower logit softcap from 30 to 15",
+    "pr_number": null
+  },
+  {
+    "record_num": 19,
+    "date": "2025-01-13",
+    "days_since_start": 230,
+    "record_time_minutes": 3.142,
+    "cumulative_loc": 558,
+    "stars": null,
+    "description": "FP8 head, offset logits, lr decay to 0.1 instead of 0.0",
+    "pr_number": null
+  },
+  {
+    "record_num": 20,
+    "date": "2025-01-16",
+    "days_since_start": 233,
+    "record_time_minutes": 2.992,
+    "cumulative_loc": 615,
+    "stars": null,
+    "description": "Merged QKV weights, long-short attention, attention scale, lower Adam epsilon, batched Muon",
+    "pr_number": null
+  },
+  {
+    "record_num": 21,
+    "date": "2025-01-26",
+    "days_since_start": 243,
+    "record_time_minutes": 2.933,
+    "cumulative_loc": 622,
+    "stars": null,
+    "description": "Reduced batch size",
+    "pr_number": null
+  },
+  {
+    "record_num": 22,
+    "date": "2025-05-24",
+    "days_since_start": 361,
+    "record_time_minutes": 2.99,
+    "cumulative_loc": 697,
+    "stars": null,
+    "description": "Faster gradient all-reduce",
+    "pr_number": null
+  },
+  {
+    "record_num": 23,
+    "date": "2025-05-25",
+    "days_since_start": 362,
+    "record_time_minutes": 2.979,
+    "cumulative_loc": 726,
+    "stars": null,
+    "description": "Overlap computation and gradient communication",
+    "pr_number": null
+  },
+  {
+    "record_num": 24,
+    "date": "2025-05-30",
+    "days_since_start": 367,
+    "record_time_minutes": 2.966,
+    "cumulative_loc": 761,
+    "stars": null,
+    "description": "Replace gradient all_reduce with reduce_scatter",
+    "pr_number": null
+  },
+  {
+    "record_num": 25,
+    "date": "2025-07-13",
+    "days_since_start": 411,
+    "record_time_minutes": 2.896,
+    "cumulative_loc": 720,
+    "stars": null,
+    "description": "Upgrade PyTorch to 2.9.0.dev20250713+cu126",
+    "pr_number": null
+  },
+  {
+    "record_num": 26,
+    "date": "2025-07-13",
+    "days_since_start": 411,
+    "record_time_minutes": 2.863,
+    "cumulative_loc": 720,
+    "stars": null,
+    "description": "Align training batch starts with EoS, increase cooldown frac to .45",
+    "pr_number": null
+  },
+  {
+    "record_num": 27,
+    "date": "2025-07-18",
+    "days_since_start": 416,
+    "record_time_minutes": 2.817,
+    "cumulative_loc": 742,
+    "stars": null,
+    "description": "Transpose one of the MLP matrices + add Triton kernel for symmetric matmul",
+    "pr_number": 109
+  },
+  {
+    "record_num": 28,
+    "date": "2025-08-23",
+    "days_since_start": 452,
+    "record_time_minutes": 2.812,
+    "cumulative_loc": 1020,
+    "stars": null,
+    "description": "Sparse attention gate",
+    "pr_number": 117
+  },
+  {
+    "record_num": 29,
+    "date": "2025-09-03",
+    "days_since_start": 463,
+    "record_time_minutes": 2.731,
+    "cumulative_loc": 1060,
+    "stars": null,
+    "description": "Flash Attention 3, 2048 max_doc_len, update ws schedule",
+    "pr_number": 118
+  },
+  {
+    "record_num": 30,
+    "date": "2025-09-05",
+    "days_since_start": 465,
+    "record_time_minutes": 2.717,
+    "cumulative_loc": 1063,
+    "stars": null,
+    "description": "Drop first MLP layer",
+    "pr_number": 120
+  },
+  {
+    "record_num": 31,
+    "date": "2025-09-10",
+    "days_since_start": 470,
+    "record_time_minutes": 2.656,
+    "cumulative_loc": 1063,
+    "stars": null,
+    "description": "Dynamically incorporate YaRN during training and validation",
+    "pr_number": 122
+  },
+  {
+    "record_num": 32,
+    "date": "2025-09-11",
+    "days_since_start": 471,
+    "record_time_minutes": 2.625,
+    "cumulative_loc": 1295,
+    "stars": null,
+    "description": "Optimize distributed training, improve skip connection gating, and enhance bfloat16 usage",
+    "pr_number": 125
+  },
+  {
+    "record_num": 33,
+    "date": "2025-09-15",
+    "days_since_start": 475,
+    "record_time_minutes": 2.565,
+    "cumulative_loc": 1368,
+    "stars": null,
+    "description": "Asynchronously fetch and index data batches, extend final layer attention window for validation",
+    "pr_number": 127
+  },
+  {
+    "record_num": 34,
+    "date": "2025-09-18",
+    "days_since_start": 478,
+    "record_time_minutes": 2.547,
+    "cumulative_loc": 1372,
+    "stars": null,
+    "description": "Smear token embeddings 1 position forward",
+    "pr_number": 130
+  },
+  {
+    "record_num": 35,
+    "date": "2025-09-21",
+    "days_since_start": 481,
+    "record_time_minutes": 2.527,
+    "cumulative_loc": 1364,
+    "stars": null,
+    "description": "Drop first attn layer, extend all long windows for validation, update schedule",
+    "pr_number": 131
+  },
+  {
+    "record_num": 36,
+    "date": "2025-09-23",
+    "days_since_start": 483,
+    "record_time_minutes": 2.495,
+    "cumulative_loc": 1423,
+    "stars": null,
+    "description": "MuonCustomSizing, perform mlp and attn reduce scatter in shared call",
+    "pr_number": 132
+  },
+  {
+    "record_num": 37,
+    "date": "2025-09-27",
+    "days_since_start": 487,
+    "record_time_minutes": 2.483,
+    "cumulative_loc": 1441,
+    "stars": null,
+    "description": "Compute cross entropy in BF16 during training",
+    "pr_number": 133
+  },
+  {
+    "record_num": 38,
+    "date": "2025-09-29",
+    "days_since_start": 489,
+    "record_time_minutes": 2.476,
+    "cumulative_loc": 1480,
+    "stars": null,
+    "description": "Polar Express, replacement for Newton-Schulz",
+    "pr_number": 134
+  },
+  {
+    "record_num": 39,
+    "date": "2025-09-30",
+    "days_since_start": 490,
+    "record_time_minutes": 2.447,
+    "cumulative_loc": 1480,
+    "stars": null,
+    "description": "Only update Adam params every other step, reduce batch size",
+    "pr_number": 136
+  },
+  {
+    "record_num": 40,
+    "date": "2025-10-04",
+    "days_since_start": 494,
+    "record_time_minutes": 2.358,
+    "cumulative_loc": 1487,
+    "stars": null,
+    "description": "Backout, misc hyperparameter tuning, optimize lambda padding",
+    "pr_number": 140
+  },
+  {
+    "record_num": 41,
+    "date": "2025-10-24",
+    "days_since_start": 514,
+    "record_time_minutes": 2.345,
+    "cumulative_loc": 1496,
+    "stars": null,
+    "description": "NorMuon",
+    "pr_number": 144
+  },
+  {
+    "record_num": 42,
+    "date": "2025-10-27",
+    "days_since_start": 517,
+    "record_time_minutes": 2.313,
+    "cumulative_loc": 1496,
+    "stars": null,
+    "description": "Update NorMuon LR, Step Logic",
+    "pr_number": 146
+  },
+  {
+    "record_num": 43,
+    "date": "2025-11-10",
+    "days_since_start": 531,
+    "record_time_minutes": 2.284,
+    "cumulative_loc": 1460,
+    "stars": null,
+    "description": "Cautious Weight Decay w/ schedule",
+    "pr_number": 154
+  },
+  {
+    "record_num": 44,
+    "date": "2025-11-16",
+    "days_since_start": 537,
+    "record_time_minutes": 2.269,
+    "cumulative_loc": 1489,
+    "stars": null,
+    "description": "Backward hooks on Adam, Profiling 101",
+    "pr_number": 149
+  },
+  {
+    "record_num": 45,
+    "date": "2025-11-18",
+    "days_since_start": 539,
+    "record_time_minutes": 2.248,
+    "cumulative_loc": 1489,
+    "stars": null,
+    "description": "Refine skip arch, update exponential decay init",
+    "pr_number": 159
+  },
+  {
+    "record_num": 46,
+    "date": "2025-11-29",
+    "days_since_start": 550,
+    "record_time_minutes": 2.203,
+    "cumulative_loc": 1491,
+    "stars": null,
+    "description": "Batch size schedule",
+    "pr_number": 163
+  },
+  {
+    "record_num": 47,
+    "date": "2025-12-10",
+    "days_since_start": 561,
+    "record_time_minutes": 2.193,
+    "cumulative_loc": 1514,
+    "stars": null,
+    "description": "Multiply attn lambda with weight instead of data, fix warmup",
+    "pr_number": 166
+  },
+  {
+    "record_num": 48,
+    "date": "2025-12-11",
+    "days_since_start": 562,
+    "record_time_minutes": 2.17,
+    "cumulative_loc": 1547,
+    "stars": null,
+    "description": "Speed up Muon, additional pre-multiply lambda, reshape matrices, update lr, update NorMuon axis",
+    "pr_number": 168
+  },
+  {
+    "record_num": 49,
+    "date": "2025-12-14",
+    "days_since_start": 565,
+    "record_time_minutes": 2.146,
+    "cumulative_loc": 1637,
+    "stars": null,
+    "description": "Partial Key Offset",
+    "pr_number": 169
+  },
+  {
+    "record_num": 50,
+    "date": "2025-12-18",
+    "days_since_start": 569,
+    "record_time_minutes": 2.128,
+    "cumulative_loc": 1638,
+    "stars": null,
+    "description": "Extend Cautious Weight Decay to Adam parameters",
+    "pr_number": 172
+  },
+  {
+    "record_num": 51,
+    "date": "2025-12-19",
+    "days_since_start": 570,
+    "record_time_minutes": 2.075,
+    "cumulative_loc": 1638,
+    "stars": null,
+    "description": "Retie Embed to lm_head, retune fp8 scales",
+    "pr_number": 175
+  },
+  {
+    "record_num": 52,
+    "date": "2025-12-21",
+    "days_since_start": 572,
+    "record_time_minutes": 2.037,
+    "cumulative_loc": 1643,
+    "stars": null,
+    "description": "Smooth scalars via beta increase, decrease smear gate lr, freeze scalars during transitions, adam all reduce",
+    "pr_number": 177
+  },
+  {
+    "record_num": 53,
+    "date": "2025-12-22",
+    "days_since_start": 573,
+    "record_time_minutes": 1.988,
+    "cumulative_loc": 1639,
+    "stars": null,
+    "description": "Multi-token prediction, untie embed/lm_head at 2/3 training, lr update, tweak CWD",
+    "pr_number": 178
+  },
+  {
+    "record_num": 54,
+    "date": "2025-12-26",
+    "days_since_start": 577,
+    "record_time_minutes": 1.94,
+    "cumulative_loc": 1763,
+    "stars": null,
+    "description": "Asymmetric Logit Rescale",
+    "pr_number": 181
+  },
+  {
+    "record_num": 55,
+    "date": "2025-12-29",
+    "days_since_start": 580,
+    "record_time_minutes": 1.918,
+    "cumulative_loc": 1779,
+    "stars": null,
+    "description": "Gates on value embeds and skip connection",
+    "pr_number": 186
+  }
+]

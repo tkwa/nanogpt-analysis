@@ -1,0 +1,26 @@
+data_summary:
+  total_records: 55
+  records_with_loc: 54
+  records_with_stars: 0
+  date_range:
+    start: '2024-05-28'
+    end: '2025-12-29'
+    total_days: 580
+  time_range:
+    initial_minutes: 45.0
+    final_minutes: 1.918
+    improvement_factor: 23.461939520333683
+regression_results:
+  power_law:
+    exponent: -0.6316296919597074
+    coefficient: 135.18950596907328
+    r_squared: 0.7268924346633523
+    p_value: 1.468732760093463e-16
+    formula: time = 135.1895 * (days+1)^-0.6316
+  exponential:
+    decay_rate: -0.0037826525054964802
+    initial_value: 15.236179486895377
+    r_squared: 0.7316498215044734
+    p_value: 9.19074790710432e-17
+    formula: time = 15.2362 * exp(-0.003783 * days)
+    half_life_days: 183.24368404254687
