@@ -1,0 +1,23 @@
+src/analysis.py
+  2e16d0161ea5099d 13-15,22-35,37-61,181-183
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.26",
+  "base_commit_sha": "e1036c3aacb71be70733b5f271fb1531bc041818",
+  "prompts": {
+    "2e16d0161ea5099d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "50c3bf3d-c7ac-48aa-a0e7-f7617f37e27d",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Thomas Kwa <kwathomas0@gmail.com>",
+      "messages": [],
+      "total_additions": 55,
+      "total_deletions": 15,
+      "accepted_lines": 45,
+      "overriden_lines": 1
+    }
+  }
+}
