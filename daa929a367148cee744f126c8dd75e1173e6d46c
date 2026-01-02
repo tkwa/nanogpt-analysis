@@ -1,0 +1,31 @@
+src/extract_records.py
+  2e16d0161ea5099d 1-55,60-111,113-161
+src/pr_date_analysis.py
+  2e16d0161ea5099d 1-154
+src/plots.py
+  2e16d0161ea5099d 1-336
+src/analysis.py
+  2e16d0161ea5099d 1-179
+ai_notes.md
+  2e16d0161ea5099d 1-147
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.26",
+  "base_commit_sha": "daa929a367148cee744f126c8dd75e1173e6d46c",
+  "prompts": {
+    "2e16d0161ea5099d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "50c3bf3d-c7ac-48aa-a0e7-f7617f37e27d",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "Thomas Kwa <kwathomas0@gmail.com>",
+      "messages": [],
+      "total_additions": 977,
+      "total_deletions": 0,
+      "accepted_lines": 972,
+      "overriden_lines": 5
+    }
+  }
+}
