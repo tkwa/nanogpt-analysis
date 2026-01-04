@@ -4,8 +4,8 @@ Measure the amount of algorithmic improvement in the nanogpt speedrun (https://g
 analysis by tkwa
 
 - Speed over time is super jagged
-- Time vs LoC is 
-
+- Time vs LoC shows an elbow pattern. At first improvements were easy to make without increasing LoC much, but then improvements became small and LoC required became larger.
+- Speed vs stars is smoother and shows diminishing returns
 
 
 

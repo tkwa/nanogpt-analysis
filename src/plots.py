@@ -138,31 +138,60 @@ def plot_speed_over_time(improvements: list[dict], output_dir: Path, fit_results
 
 
 def plot_speed_vs_loc(improvements: list[dict], output_dir: Path):
-    """Plot speed vs lines of code."""
+    """Plot speedup vs lines of code."""
     # Filter records with valid data
     valid = [i for i in improvements if i["cumulative_loc"] is not None and i["record_time_minutes"] is not None]
 
     loc = np.array([i["cumulative_loc"] for i in valid])
     times = np.array([i["record_time_minutes"] for i in valid])
 
+    # Calculate speedup relative to 45min baseline
+    baseline_time = 45.0
+    speedup = baseline_time / times
+
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
     # Linear scale
     ax1 = axes[0]
-    ax1.scatter(loc, times, alpha=0.7, s=30)
+    ax1.scatter(loc, speedup, alpha=0.7, s=30)
     ax1.set_xlabel("Cumulative Lines of Code")
-    ax1.set_ylabel("Training time (minutes)")
-    ax1.set_title("Training Time vs Lines of Code")
+    ax1.set_ylabel("Speedup")
+    ax1.set_title("Speedup vs Lines of Code")
     ax1.grid(True, alpha=0.3)
 
-    # Semi-log scale
+    # Linear fit
+    slope1, intercept1, r_value1, _, _ = stats.linregress(loc, speedup)
+    loc_fit = np.linspace(0, loc.max(), 100)
+    ax1.plot(loc_fit, slope1 * loc_fit + intercept1, 'r-', alpha=0.7,
+             label=f'Linear fit (R²={r_value1**2:.3f})')
+    ax1.legend()
+
+    # Format y-axis with 'x' suffix
+    ax1.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x:.0f}x'))
+    ax1.set_ylim(bottom=1)
+    ax1.set_xlim(left=0)
+
+    # Semi-log on Y (log speedup)
     ax2 = axes[1]
-    ax2.scatter(loc, times, alpha=0.7, s=30)
+    ax2.scatter(loc, speedup, alpha=0.7, s=30)
     ax2.set_yscale("log")
     ax2.set_xlabel("Cumulative Lines of Code")
-    ax2.set_ylabel("Training time (minutes, log scale)")
-    ax2.set_title("Training Time vs LoC (Semi-log)")
+    ax2.set_ylabel("Speedup (log scale)")
+    ax2.set_title("Speedup vs LoC (Semi-log)")
     ax2.grid(True, alpha=0.3)
+
+    # Log-linear fit (linear in log space)
+    log_speedup = np.log10(speedup)
+    slope2, intercept2, r_value2, _, _ = stats.linregress(loc, log_speedup)
+    log_fit = slope2 * loc_fit + intercept2
+    ax2.plot(loc_fit, 10**log_fit, 'r-', alpha=0.7,
+             label=f'Exponential fit (R²={r_value2**2:.3f})')
+    ax2.legend()
+
+    # Format y-axis with 'x' suffix
+    ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x:.0f}x'))
+    ax2.set_ylim(bottom=1)
+    ax2.set_xlim(left=0)
 
     plt.tight_layout()
     plt.savefig(output_dir / "speed_vs_loc.png", dpi=150)
@@ -172,7 +201,7 @@ def plot_speed_vs_loc(improvements: list[dict], output_dir: Path):
 
 
 def plot_speed_vs_stars(improvements: list[dict], output_dir: Path):
-    """Plot speed vs stars (if available)."""
+    """Plot speedup vs stars (if available)."""
     # Filter records with valid data
     valid = [i for i in improvements if i["stars"] is not None and i["record_time_minutes"] is not None]
 
@@ -183,24 +212,51 @@ def plot_speed_vs_stars(improvements: list[dict], output_dir: Path):
     stars = np.array([i["stars"] for i in valid])
     times = np.array([i["record_time_minutes"] for i in valid])
 
+    # Calculate speedup relative to 45min baseline
+    baseline_time = 45.0
+    speedup = baseline_time / times
+
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
     # Linear scale
     ax1 = axes[0]
-    ax1.scatter(stars, times, alpha=0.7, s=30)
+    ax1.scatter(stars, speedup, alpha=0.7, s=30)
     ax1.set_xlabel("Repository Stars")
-    ax1.set_ylabel("Training time (minutes)")
-    ax1.set_title("Training Time vs Stars")
+    ax1.set_ylabel("Speedup")
+    ax1.set_title("Speedup vs Stars")
     ax1.grid(True, alpha=0.3)
 
-    # Semi-log on Y
+    # Linear fit
+    slope1, intercept1, r_value1, _, _ = stats.linregress(stars, speedup)
+    stars_fit = np.linspace(stars.min(), stars.max(), 100)
+    ax1.plot(stars_fit, slope1 * stars_fit + intercept1, 'r-', alpha=0.7,
+             label=f'Linear fit (R²={r_value1**2:.3f})')
+    ax1.legend()
+
+    # Format y-axis with 'x' suffix
+    ax1.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x:.0f}x'))
+    ax1.set_ylim(bottom=1)
+
+    # Semi-log on Y (log speedup)
     ax2 = axes[1]
-    ax2.scatter(stars, times, alpha=0.7, s=30)
+    ax2.scatter(stars, speedup, alpha=0.7, s=30)
     ax2.set_yscale("log")
     ax2.set_xlabel("Repository Stars")
-    ax2.set_ylabel("Training time (minutes, log scale)")
-    ax2.set_title("Training Time vs Stars (Semi-log)")
+    ax2.set_ylabel("Speedup (log scale)")
+    ax2.set_title("Speedup vs Stars (Semi-log)")
     ax2.grid(True, alpha=0.3)
+
+    # Log-linear fit (linear in log space)
+    log_speedup = np.log10(speedup)
+    slope2, intercept2, r_value2, _, _ = stats.linregress(stars, log_speedup)
+    log_fit = slope2 * stars_fit + intercept2
+    ax2.plot(stars_fit, 10**log_fit, 'r-', alpha=0.7,
+             label=f'Exponential fit (R²={r_value2**2:.3f})')
+    ax2.legend()
+
+    # Format y-axis with 'x' suffix
+    ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x:.0f}x'))
+    ax2.set_ylim(bottom=1)
 
     plt.tight_layout()
     plt.savefig(output_dir / "speed_vs_stars.png", dpi=150)
@@ -228,6 +284,161 @@ def plot_loc_over_time(improvements: list[dict], output_dir: Path):
     plt.close()
 
     print(f"Saved loc_over_time.png")
+
+
+def plot_combined_normalized(improvements: list[dict], output_dir: Path):
+    """Plot normalized speed, LoC, and stars on the same axes."""
+    from datetime import datetime
+    import matplotlib.dates as mdates
+
+    # Filter records with all data
+    valid = [i for i in improvements if
+             i["days_since_start"] is not None and
+             i["cumulative_loc"] is not None and
+             i["record_time_minutes"] is not None]
+
+    dates = [datetime.strptime(i["date"], "%Y-%m-%d") for i in valid]
+    record_nums = np.array([i["record_num"] for i in valid])
+    times = np.array([i["record_time_minutes"] for i in valid])
+    loc = np.array([i["cumulative_loc"] for i in valid])
+    stars = np.array([i["stars"] if i["stars"] is not None else 0 for i in valid])
+
+    # Calculate speedup (1x = original 45min baseline, higher = faster)
+    baseline_time = 45.0  # Original llm.c baseline
+    speedup = baseline_time / times  # e.g., 45/1.9 = ~23x
+
+    # Normalize to 0-1 range for plotting on shared axes
+    def normalize(arr):
+        return (arr - arr.min()) / (arr.max() - arr.min())
+
+    loc_norm = normalize(loc)
+
+    stars_for_norm = stars.copy()
+    if stars_for_norm.min() == stars_for_norm.max():
+        stars_norm = np.ones_like(stars_for_norm)
+    else:
+        stars_norm = normalize(stars_for_norm)
+
+    # Normalize speedup linearly (starting from min, not 0)
+    speedup_norm = normalize(speedup)
+
+    fig, ax1 = plt.subplots(figsize=(14, 7))
+
+    # Plot speedup on left axis (primary)
+    color_speed = '#2563eb'  # Blue
+    color_loc = '#dc2626'    # Red
+    color_stars = '#16a34a'  # Green
+
+    line1, = ax1.plot(dates, speedup_norm, 'o-', color=color_speed,
+                      label='Speedup', linewidth=2, markersize=4, alpha=0.8)
+    ax1.set_xlabel('Date', fontsize=11)
+    ax1.set_ylabel('Speedup', color=color_speed, fontsize=11)
+    ax1.tick_params(axis='y', labelcolor=color_speed)
+
+    # Format x-axis dates
+    ax1.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
+    ax1.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
+    plt.setp(ax1.xaxis.get_majorticklabels(), rotation=45, ha='right')
+
+    # Set speedup y-axis ticks to show actual speedup values
+    speedup_ticks = np.linspace(speedup.min(), speedup.max(), 6)
+    speedup_ticks_norm = normalize(speedup_ticks)
+    ax1.set_yticks(speedup_ticks_norm)
+    ax1.set_yticklabels([f'{s:.0f}x' for s in speedup_ticks])
+    ax1.set_ylim(-0.05, 1.05)
+
+    # Plot LoC on right axis
+    ax2 = ax1.twinx()
+    line2, = ax2.plot(dates, loc_norm, 's--', color=color_loc,
+                      label='Lines of Code', linewidth=2, markersize=4, alpha=0.8)
+    ax2.set_ylabel('Lines of Code', color=color_loc, fontsize=11)
+    ax2.tick_params(axis='y', labelcolor=color_loc)
+    ax2.set_ylim(-0.05, 1.05)
+
+    # Set LoC ticks to show actual values
+    loc_tick_values = np.linspace(loc.min(), loc.max(), 5)
+    loc_tick_norm = normalize(loc_tick_values)
+    ax2.set_yticks(loc_tick_norm)
+    ax2.set_yticklabels([f'{int(v)}' for v in loc_tick_values])
+
+    # Plot stars as a third line (no separate axis, just visual)
+    line3, = ax1.plot(dates, stars_norm, '^:', color=color_stars,
+                      label='Stars', linewidth=2, markersize=4, alpha=0.8)
+
+    # Create secondary x-axis at top for record numbers
+    ax3 = ax1.twiny()
+    ax3.set_xlim(ax1.get_xlim())
+
+    # Create mapping from dates to record numbers for tick placement
+    # Place ticks every 5 records
+    tick_records = list(range(5, int(record_nums.max()) + 1, 5))
+    tick_dates = []
+    tick_labels = []
+    for rec in tick_records:
+        # Find the date for this record number
+        for i, rn in enumerate(record_nums):
+            if rn == rec:
+                tick_dates.append(mdates.date2num(dates[i]))
+                tick_labels.append(str(rec))
+                break
+
+    ax3.set_xticks(tick_dates)
+    ax3.set_xticklabels(tick_labels)
+    ax3.set_xlabel('Record #', fontsize=11, loc='left')
+
+    # Add text annotation for the starting point (bottom left)
+    first_idx = 0
+    first_speedup = speedup[first_idx]
+    first_loc = loc[first_idx]
+    first_stars = stars[first_idx]
+    first_time = times[first_idx]
+
+    original_text = (f'Original:\n'
+                    f'  {first_speedup:.1f}x speedup\n'
+                    f'  {first_time:.2f} min\n'
+                    f'  {int(first_loc)} LoC\n'
+                    f'  {int(first_stars)} stars')
+
+    ax1.annotate(original_text,
+                xy=(dates[first_idx], speedup_norm[first_idx]),
+                xytext=(15, 40), textcoords='offset points',
+                fontsize=9, family='monospace',
+                bbox=dict(boxstyle='round,pad=0.5', facecolor='white', edgecolor='gray', alpha=0.9),
+                arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=-0.2', color='gray'))
+
+    # Add text annotation for the final point (top right)
+    final_idx = -1
+    final_speedup = speedup[final_idx]
+    final_loc = loc[final_idx]
+    final_stars = stars[final_idx]
+    final_time = times[final_idx]
+
+    final_text = (f'Final Record:\n'
+                 f'  {final_speedup:.1f}x speedup\n'
+                 f'  {final_time:.2f} min\n'
+                 f'  {int(final_loc)} LoC\n'
+                 f'  {int(final_stars)} stars')
+
+    ax1.annotate(final_text,
+                xy=(dates[final_idx], speedup_norm[final_idx]),
+                xytext=(-130, -30), textcoords='offset points',
+                fontsize=9, family='monospace',
+                bbox=dict(boxstyle='round,pad=0.5', facecolor='white', edgecolor='gray', alpha=0.9),
+                arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0.2', color='gray'))
+
+    # Legend
+    lines = [line1, line2, line3]
+    labels = [l.get_label() for l in lines]
+    ax1.legend(lines, labels, loc='upper left', fontsize=10)
+
+    ax1.set_title('Diminishing Returns in the NanoGPT Speedrun', fontsize=13, fontweight='bold', pad=10)
+    ax1.grid(True, alpha=0.3)
+
+    plt.tight_layout()
+    plt.savefig(output_dir / "combined_normalized.png", dpi=150)
+    plt.close()
+
+    print("Saved combined_normalized.png")
 
 
 def main():
@@ -289,6 +500,7 @@ def main():
     plot_speed_vs_loc(improvements, plots_dir)
     plot_speed_vs_stars(improvements, plots_dir)
     plot_loc_over_time(improvements, plots_dir)
+    plot_combined_normalized(improvements, plots_dir)
 
     print(f"\nAll plots saved to {plots_dir}/")
 
